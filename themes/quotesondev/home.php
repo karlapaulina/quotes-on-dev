@@ -36,7 +36,7 @@ get_header(); ?>
 				// no posts found
 			}
 			?>
-				
+		<section class="quotes-container"></section>
 		<button id="quote-btn">Show Me Another!</button>
 
 			

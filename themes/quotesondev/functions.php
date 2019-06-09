@@ -1,3 +1,4 @@
+
 <?php
 /**
  * Quotes on Dev Theme functions and definitions.
@@ -87,10 +88,21 @@ function red_scripts() {
    $script_url = get_template_directory_uri() . '/build/js/api.min.js';
    wp_enqueue_script( 'jquery' );
    wp_enqueue_script( 'red_comments', $script_url, array( 'jquery' ), false, true );
-  wp_localize_script( 'red_comments', 'red_vars', array(
+   wp_localize_script( 'red_comments', 'red_vars', array(
       'rest_url' => esc_url_raw( rest_url() ),
       'wpapi_nonce' => wp_create_nonce( 'wp_rest' ),
       'post_id' => get_the_ID()
   ) );
 }
 add_action( 'wp_enqueue_scripts', 'red_scripts' );
+
+
+add_action( 'rest_api_init', function () {
+    register_rest_route( 'api', '/any', array(
+        'methods'   =>  'GET',
+        'callback'  =>  'get_random',
+    ) );
+});
+function get_random() {
+    return get_posts( array( 'orderby' => 'rand', 'posts_per_page' => 1) );
+}
