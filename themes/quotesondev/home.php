@@ -27,7 +27,7 @@ get_header(); ?>
 					$the_query->the_post();
 					$content = apply_filters( 'the_content', get_the_content() );
 					echo  $content;
-					echo '<p class="author-title">' . get_the_title() . '</p>';
+					echo '<h3 class="author-title">' . get_the_title() . '</h3>';
 				}
 				echo '</section>';
 				/* Restore original Post Data */
@@ -36,7 +36,6 @@ get_header(); ?>
 				// no posts found
 			}
 			?>
-		<section class="quotes-container"></section>
 		<button id="quote-btn">Show Me Another!</button>
 
 			
