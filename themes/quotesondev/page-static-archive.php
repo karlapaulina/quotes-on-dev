@@ -1,6 +1,9 @@
-<?php
+
+ <?php
 /**
  * The main template file.
+
+
  *
  * @package QOD_Starter_Theme
  */
@@ -27,7 +30,7 @@ get_header(); ?>
 					$the_query->the_post();
 					$content = apply_filters( 'the_content', get_the_content() );
 					echo  $content;
-					echo '<h3 class="author-title">' . get_the_title() . '</h3>';
+					echo '<p class="author-title">' . get_the_title() . '</p>';
 				}
 				echo '</section>';
 				/* Restore original Post Data */
@@ -36,8 +39,8 @@ get_header(); ?>
 				// no posts found
 			}
 			?>
+				
 		<button id="quote-btn">Show Me Another!</button>
-
 
 			
 
@@ -45,3 +48,5 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php get_footer(); ?>
+
+
