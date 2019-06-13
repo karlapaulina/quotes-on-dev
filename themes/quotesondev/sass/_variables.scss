@@ -8,7 +8,7 @@ $dashed_border: 1px dashed $color__base;
 // Colors
 
 $color__background-body: #fff;
-$color__text-main: #404040;
+$color__text-main: #ffffff;
 $color_brand-green: #00cc00;
 
 $color__background-screen: #f1f1f1;
@@ -20,7 +20,7 @@ $color__background-ins: #fff9c0;
 $color_background-main: #222222;
 $color__border-abbr: #666;
 
-$color__link: royalblue;
+$color__link: $color_brand-green;
 $color__link-visited: purple;
 $color__link-hover: midnightblue;
 

@@ -1,14 +1,11 @@
 $(document).ready(function () {
 
-
-    // submit is an action performed ON THE FORM ITSELF...
-    // probably best to give the form an ID attribute and refer to it by that
     $('#quote-btn').on('click', function (event) {
-        // prevent the usual form submission behaviour; the "action" attribute of the form
+
         event.preventDefault();
-        // validation goes below...
+
         $.ajax({
-            // the server script you want to send your data to
+
             'url': 'http://localhost:8888/lessons/quoteDev/wp-json/wp/v2/posts?filter[orderby]=rand&filter[posts_per_page]=1',
             // all of your POST/GET variables
             'data': {
@@ -36,12 +33,6 @@ $(document).ready(function () {
                     $('.quote-content').append(quote)
                     $('.author-title').append(author)
                 }
-
-
-
-                // what you want to happen when an ajax call to the server is successfully completed
-                // 'response' is what you get back from the script/serverd
-                // usually you want to format your response and spit it out to the page
             })
             .fail(function (code, status) {
                 // what you want to happen if the ajax request fails (404 error, timeout, etc.)
@@ -53,6 +44,10 @@ $(document).ready(function () {
                 // here, you would "stop" your loading animations, and maybe output a footer at the end of your content, reading "done"
             });
     });
+
+
+
+
 
 });
 
