@@ -89,7 +89,8 @@ function red_scripts() {
    wp_enqueue_script( 'jquery' );
    wp_enqueue_script( 'red_comments', $script_url, array( 'jquery' ), false, true );
    wp_localize_script( 'red_comments', 'red_vars', array(
-      'rest_url' => esc_url_raw( rest_url() ),
+	  'rest_url' => esc_url_raw( rest_url() ),
+	  'home_url' => esc_url_raw( home_url() ),
       'wpapi_nonce' => wp_create_nonce( 'wp_rest' ),
       'post_id' => get_the_ID()
   ) );

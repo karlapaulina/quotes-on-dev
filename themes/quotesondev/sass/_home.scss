@@ -1,3 +1,14 @@
 .blog{
      background: $color_background-main;
+     margin: 10% 2%;
+
+          .quotes-container{
+               margin-bottom: 10%;
+               margin-top: 10%;
+          }
+          #quote-btn{
+               width: 200px;
+               height: 45px;
+               font-size: 16px;
+          }
 }

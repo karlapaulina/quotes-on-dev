@@ -15,7 +15,7 @@ get_header(); ?>
 
         <?php
 if ( is_user_logged_in() ) {
-  echo  '<form>
+  echo  '<form id="submit-form">
             <label for="author">Author of Quote</label>
             <br/>
             <input type="text" name="author">

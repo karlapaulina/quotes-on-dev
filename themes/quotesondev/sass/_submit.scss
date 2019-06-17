@@ -1,3 +1,5 @@
 .page-id-213{
-     background: $color_background-main;
+     @media screen and (min-width: 480px) {
+     margin: 10% 2%;
+     }
 }

@@ -86,17 +86,35 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.page-id-208 {
-  background: #222222; }
+footer {
+  margin-top: 20%;
+  width: 100%; }
+  footer .primary-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
 
-.page-id-211 {
-  background: #222222; }
+@media screen and (min-width: 480px) {
+  .page-id-208 {
+    margin: 10% 2%; } }
 
 .blog {
-  background: #222222; }
+  background: #222222;
+  margin: 10% 2%; }
+  .blog .quotes-container {
+    margin-bottom: 10%;
+    margin-top: 10%; }
+  .blog #quote-btn {
+    width: 200px;
+    height: 45px;
+    font-size: 16px; }
 
-.page-id-213 {
-  background: #222222; }
+@media screen and (min-width: 480px) {
+  .page-id-213 {
+    margin: 10% 2%; } }
 
 html {
   font-family: sans-serif;
@@ -323,7 +341,8 @@ textarea {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  clear: both; }
+  clear: both;
+  font-family: "Exo Medium", sans-serif; }
 
 /* Copy */
 p {
@@ -379,7 +398,7 @@ html {
           box-sizing: inherit; }
 
 body {
-  background: #fff;
+  background: #222222;
   /* Fallback for when there is no custom background color defined. */ }
 
 blockquote,
@@ -395,10 +414,6 @@ hr {
   border: 0;
   height: 1px;
   margin-bottom: 1.5rem; }
-
-ul,
-ol {
-  margin: 0 0 1.5rem 3rem; }
 
 ul {
   list-style: disc; }
@@ -464,7 +479,8 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-  color: #222222;
+  color: #fff;
+  background: #222222;
   border: 2px solid #00cc00;
   border-radius: 3px; }
   input[type="text"]:focus,
@@ -473,15 +489,7 @@ textarea {
   input[type="password"]:focus,
   input[type="search"]:focus,
   textarea:focus {
-    color: #111; }
-
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"] {
-  color: #222222;
-  padding: 3px; }
+    border: 2px solid #00cc00; }
 
 textarea {
   padding-left: 3px;
@@ -492,82 +500,133 @@ textarea {
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: #00cc00; }
-  a:visited {
-    color: purple; }
-  a:hover, a:focus, a:active {
-    color: midnightblue; }
-  a:focus {
-    outline: thin dotted; }
-  a:hover, a:active {
-    outline: 0; }
+  color: #00cc00;
+  text-decoration: none; }
 
 /* Menus */
-.main-navigation {
-  clear: both;
-  display: block;
-  float: left;
-  width: 100%; }
-  .main-navigation ul {
-    display: none;
-    list-style: none;
-    margin: 0;
-    padding-left: 0; }
-    .main-navigation ul ul {
-      -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-              box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-      float: left;
-      position: absolute;
-      top: 1.5rem;
-      left: -999rem;
-      z-index: 99999; }
-      .main-navigation ul ul ul {
-        left: -999rem;
-        top: 0; }
-      .main-navigation ul ul li:hover > ul,
-      .main-navigation ul ul li.focus > ul {
-        left: 100%; }
-      .main-navigation ul ul a {
-        width: 200px; }
-    .main-navigation ul li:hover > ul,
-    .main-navigation ul li.focus > ul {
-      left: auto; }
-  .main-navigation li {
-    float: left;
-    position: relative; }
-  .main-navigation a {
-    display: block;
-    text-decoration: none; }
+.main-navigation,
+.menu-menu-1-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .main-navigation #primary-menu,
+  .menu-menu-1-container #primary-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 50%;
+    padding-top: 10px; }
+    .main-navigation #primary-menu li,
+    .menu-menu-1-container #primary-menu li {
+      list-style-type: none; }
 
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-  display: block; }
+@media screen and (min-width: 600px) {
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-line-pack: start;
+        align-content: flex-start; }
+  .site-info {
+    width: 70%; }
+  .main-navigation,
+  .menu-menu-1-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap; }
+    .main-navigation #primary-menu,
+    .menu-menu-1-container #primary-menu {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+      -ms-flex-line-pack: start;
+          align-content: flex-start;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+      width: 70%;
+      padding-top: 10px; }
+      .main-navigation #primary-menu li,
+      .menu-menu-1-container #primary-menu li {
+        -ms-flex-item-align: start;
+            align-self: flex-start;
+        list-style-type: none; } }
 
-@media screen and (min-width: 768px) {
-  .menu-toggle {
-    display: none; }
-  .main-navigation ul {
-    display: block; } }
-
-.site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
-.post-navigation {
-  margin: 0 0 1.5rem;
-  overflow: hidden; }
-
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-  float: left;
-  width: 50%; }
-
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-  float: right;
-  text-align: right;
-  width: 50%; }
+@media screen and (min-width: 1040px) {
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 100%; }
+  .site-info {
+    justify-self: flex-end;
+    width: 70%; }
+  .main-navigation,
+  .menu-menu-1-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap; }
+    .main-navigation #primary-menu,
+    .menu-menu-1-container #primary-menu {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+      -ms-flex-line-pack: end;
+          align-content: flex-end;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+      width: 70%;
+      padding-top: 10px; }
+      .main-navigation #primary-menu li,
+      .menu-menu-1-container #primary-menu li {
+        -ms-flex-item-align: start;
+            align-self: flex-start;
+        list-style-type: none; } }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -652,6 +711,15 @@ a {
   clear: both;
   margin: 0 0 1.5rem; }
 
+.error404 fieldset {
+  border: none; }
+  .error404 fieldset input {
+    background: #222222; }
+
+@media screen and (min-width: 480px) {
+  .error404 {
+    margin: 10% 2%; } }
+
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
@@ -673,4 +741,11 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* All Archives Page */
-/* Submit a Quote Page */
+@media screen and (min-width: 480px) {
+  .page-id-211 {
+    margin: 10% 2%; }
+    .page-id-211 h2 {
+      font-family: 'Exo Medium', sans-serif;
+      font-size: 20px; }
+    .page-id-211 li {
+      list-style-type: none; } }

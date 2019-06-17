@@ -4,4 +4,18 @@
 
 /* All Archives Page */
 
-/* Submit a Quote Page */
+.page-id-211{
+    @media screen and (min-width: 480px) {
+    margin: 10% 2%;
+
+    h2{
+        font-family: 'Exo Medium', sans-serif;
+        font-size: $base_font-size * 1.25;
+    }
+
+
+    li {
+        list-style-type: none;
+    }
+        }
+}
