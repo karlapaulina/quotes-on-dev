@@ -1,6 +1,30 @@
-# Quotes on Dev Starter
+# Quotes on Dev
 
-A WordPress starter theme for the Quotes on Dev project, forked from Underscores.
+A responsive WordPress site with a custom-built theme that allows the user to shuffle through random quotes about web development, as well as allowing the user to submit their own quote through a form.
+
+<!--![Image](images/aloha-screenshot.png)-->
+
+## Built With
+
+* [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
+* [jQuery](https://jquery.com/)
+* [SASS](https://sass-lang.com/)
+* [PHP](https://developer.wordpress.org/)
+*  Wordpress CMS
+
+
+
+## Personal learnings
+
+* Reinforcing knowledge on Wordpress Hierarchy
+* First time using and implementing AJAX and API calls with PHP
+* This project reinforced knowledge in PHP an
+
+## Authors
+
+* [Karla Gonzalez](https://github.com/karlapaulina)
+
+
 
 ## Installation
 

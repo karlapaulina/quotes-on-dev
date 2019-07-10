@@ -1,9 +1,6 @@
-
- <?php
+<?php
 /**
- * The main template file.
-
-
+ * The template for displaying archive pages.
  *
  * @package QOD_Starter_Theme
  */
@@ -12,10 +9,17 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+			<i class="fas fa-quote-left"></i>
+	
+			<header class="page-header">
+				
+				<?php
+					the_archive_title( '<h1 class="page-title">', '</h1>' );
+				?>
+				
+			</header><!-- .page-header -->
+			<i class="fas fa-quote-right"></i>
 
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php get_template_part( 'template-parts/content', 'page' ); ?>
 			
 		
 	 <h2>Quote Authors</h2>
@@ -26,14 +30,15 @@ get_header(); ?>
                         <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
 					<?php endforeach;
 					wp_reset_postdata(); ?>
-		</ul>
-				<section class="quote-categories">
-					<?php wp_list_categories (); ?>
-				</section>	
-
+				</ul>
+				<div class="archive-categories">
+				<?php wp_list_categories (); ?>
+					</div>	
+					
 				<h2>Tags</h2>
 				<ul class="archive-tags">
 					<?php
+					
 					$tags = get_tags();
 					if ( $tags ) :
 						foreach ( $tags as $tag ) : ?>
@@ -41,12 +46,8 @@ get_header(); ?>
 						<?php endforeach; ?>
 					<?php endif; ?>
 				</ul>
-		
-			<?php endwhile; // End of the loop. ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php get_footer(); ?>
-
-

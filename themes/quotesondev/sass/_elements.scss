@@ -45,11 +45,11 @@ ol {
   list-style: decimal;
 }
 
-li > ul,
-li > ol {
-  margin-bottom: 0;
-  margin-left: $base__space-unit;
-}
+// li > ul,
+// li > ol {
+//   margin-bottom: 0;
+//   margin-left: $base__space-unit;
+// }
 
 dt {
   font-weight: bold;

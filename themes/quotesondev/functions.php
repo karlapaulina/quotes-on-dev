@@ -86,6 +86,7 @@ require get_template_directory() . '/inc/api.php';
 
 function red_scripts() {
    $script_url = get_template_directory_uri() . '/build/js/api.min.js';
+   wp_enqueue_style('font-awesome', 'https://use.fontawesome.com/releases/v5.8.2/css/all.css"');
    wp_enqueue_script( 'jquery' );
    wp_enqueue_script( 'red_comments', $script_url, array( 'jquery' ), false, true );
    wp_localize_script( 'red_comments', 'red_vars', array(

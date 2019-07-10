@@ -21,17 +21,22 @@ $(document).ready(function () {
             }
         })
             .done(function (response) {
-                console.log(response);
-                $('.quotes-container p').addClass('quote-content');
+
+                $('.quotes-container p:first-of-type').addClass('quote-content');
 
                 let x = 0
                 for (x = 0; x < response.length; x++) {
                     const quote = response[x].content.rendered
                     const author = response[x].title.rendered
+                    let source = response[x]._qod_quote_source
+                    let sourceURL = response[x]._qod_quote_source_url;
+
                     $('.quote-content').empty()
                     $('.author-title').empty()
+                    $('.author-source-link').empty()
                     $('.quote-content').append(quote)
                     $('.author-title').append(author)
+                    $('.author-source-link').append('<a href ="' + sourceURL + '">' + source + '</a>')
                 }
             })
             .fail(function (code, status) {

@@ -47,7 +47,25 @@ textarea {
 	}
 }
 
+input[name="quote"] {
+	width: 500px;
+	height: 75px;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
 
+input[name="author"],
+input[name="quote-source"],
+input[name="quote-source-url"]{
+	width: 300px;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+.fa-search{
+	color: $color_brand-green;
+	padding-left: 2%;
+}
 
 
 textarea {

@@ -10,7 +10,7 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
+             <i class="fas fa-quote-left"></i> 
 		<h1><?php the_title(); ?></h1>
 
         <?php
@@ -37,11 +37,10 @@ if ( is_user_logged_in() ) {
         </form>';
 } else {
     echo '<p>Sorry, you must be logged in to submit a quote.</p>';
-    echo '<p>Click here to login.</p>';
-   wp_login_form();
+    echo '<a href="'. wp_login_url(). '">Click here to login.</a>';
 }
 ?>	
-
+    		<i class="fas fa-quote-right"></i>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
