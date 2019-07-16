@@ -9,6 +9,7 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+		<i class="fas fa-quote-left"></i>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
@@ -17,7 +18,7 @@ get_header(); ?>
 			<?php the_post_navigation(); ?>
 
 		<?php endwhile; // End of the loop. ?>
-
+			<i class="fas fa-quote-right"></i>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

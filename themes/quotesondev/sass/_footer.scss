@@ -1,13 +1,21 @@
 footer {
     display: flex;
+    flex-direction: column;
     flex-wrap: nowrap;
-    justify-items: flex-end;
-    align-items: flex-end;
-    width: $fixed_width;
+    width: 75%;
     margin-bottom: 5%;
     margin-right: auto;
     margin-left: auto;
+
     @media all and (min-width: 1240px) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-items: flex-end;
+        align-items: flex-end;
+        width: $fixed_width;
         margin-bottom: 5%;
+        margin-right: auto;
+        margin-left: auto;
     }
 }

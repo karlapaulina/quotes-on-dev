@@ -22,7 +22,7 @@ $(document).ready(function () {
         })
             .done(function (response) {
 
-                $('.quotes-container p:first-of-type').addClass('quote-content');
+                // $('.quotes-container p:first-of-type').addClass('quote-content');
 
                 let x = 0
                 for (x = 0; x < response.length; x++) {
@@ -31,10 +31,10 @@ $(document).ready(function () {
                     let source = response[x]._qod_quote_source
                     let sourceURL = response[x]._qod_quote_source_url;
 
-                    $('.quote-content').empty()
+                    $('.quotes-container p:nth-child(1)').empty()
                     $('.author-title').empty()
                     $('.author-source-link').empty()
-                    $('.quote-content').append(quote)
+                    $('.quotes-container p:nth-child(1)').append(quote)
                     $('.author-title').append(author)
                     $('.author-source-link').append('<a href ="' + sourceURL + '">' + source + '</a>')
                 }

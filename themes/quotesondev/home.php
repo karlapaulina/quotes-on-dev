@@ -26,9 +26,11 @@ get_header(); ?>
 				while ( $the_query->have_posts() ) {
 					$the_query->the_post();
 					$content = apply_filters( 'the_content', get_the_content() );
-					echo  '<p">' .$content . '</p>';
+					echo  $content;
+					echo '<section class="author-info">';
 					echo '<h3 class="author-title">' . '&#8213 '. get_the_title() . '</h3>';
 					echo '<p class="author-source-link"></p>';
+					echo '</section>';
 				}
 				echo '</section>';
 				/* Restore original Post Data */
