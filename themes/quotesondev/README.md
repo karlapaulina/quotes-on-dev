@@ -1,8 +1,8 @@
 # Quotes on Dev
 
-A responsive WordPress site with a custom-built theme that allows the user to shuffle through random quotes about web development, as well as allowing the user to submit their own quote through a form.
+A responsive WordPress site that utilizes the Wordpress REST API with a custom-built theme that allows the user to shuffle through random quotes on web development. As well as allowing the user to submit their own quote through a form.
 
-<!--![Image](images/aloha-screenshot.png)-->
+![Image](quotes_on_dev_screenshot.png)
 
 ## Built With
 
