@@ -7,15 +7,14 @@ footer {
     margin-right: auto;
     margin-left: auto;
 
-    @media all and (min-width: 1240px) {
-        display: flex;
+    @media all and (min-width: 640px) {
         flex-direction: row;
-        flex-wrap: nowrap;
+    }
+
+    @media all and (min-width: 1240px) {
+        flex-direction: row;
         justify-items: flex-end;
         align-items: flex-end;
         width: $fixed_width;
-        margin-bottom: 5%;
-        margin-right: auto;
-        margin-left: auto;
     }
 }
